@@ -1,0 +1,41 @@
+* What it is?
+
+#+ATTR_ORG: :width 600
+#+ATTR_LATEX: :width 6.0in
+#+ATTR_HTML: :width 600px
+[[file:org-kindle.png]]
+
+
+* Motivation
+
+Because I store ebooks in Org Wiki style database. All ebooks are organized (use
+=org-attach=) with links in Org-mode files under some kind of knowledge category
+structure directories. So I need to send an ebook to external device with one
+keybinding or one command instead of manually copy with complex path (=org-attach=
+use some kind of prefix for storing directory).
+
+
+* External Dependencies
+
+This packages use a command =ebook-convert= which comes from [[https://calibre-ebook.com/][Calibre]]. So if you
+want to use auto convert functionality, you need to install it manuall.
+
+
+* Features
+
+- auto send the file under org-mode ~file://~ link to your external devices like
+  Kindle, NOOK etc with corresponding formats.
+  - auto convert to corresponding formats if necessary. Like send =.epub= to
+    Kindle by auto converting to =.mobi= or =.azw3= formats depending on your option
+    ~org-send-ebook-kindle-default-format~.
+
+* Todos
+
+- [ ] One command =org-kindle-sync-notes= to sync Kindle's notes with Org Mode notes file.
+
+* Notices
+
+In theatrically, this package should work for non-kindle ereaders too. User can
+set device path in variables. But becaused not tested, so I can't guarantee that
+package will work correctly. But PR welcome to improve it. I appreciate it.
+
